@@ -26,11 +26,25 @@ function App() {
   console.log(todos)
 
   return (
-    <div className='App'>
-      <h1>My "Gage" List</h1>
-      <Todos todos={todos}/>
+    <div className='App' style={styles.container }>
+      <h1 style={styles.title}>My "Gage" List</h1>
+      <Todos todos={todos} />
+      
     </div>
+    
   )
+  
+}
+
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  }, 
+  title: {
+    fontSize: '36px',
+  },
 }
 
 export default App
