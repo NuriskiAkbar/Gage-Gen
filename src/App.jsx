@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todos from './components/Todos'
+import TodoForm from './components/TodoForm'
 
 function App() {
   const [todos, setTodos] = useState([
@@ -40,9 +41,25 @@ function App() {
     setTodos(deletedTodo)
   }
 
+  const addTodo = (todoTitle) =>{
+    if(todoTitle === ''){
+      return
+    }
+
+    const newTodo = {
+      id: todos.length + 1,
+      title: todoTitle,
+      completed: false
+    }
+
+    const updatedTodos = todos.concat(newTodo)
+    setTodos(updatedTodos)
+  }
+
   return (
     <div className='App' style={styles.container }>
       <h1 style={styles.title}>My "Gage" List</h1>
+      <TodoForm addTodo={addTodo}/>
       <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
     </div>
   )
