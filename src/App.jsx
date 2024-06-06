@@ -33,13 +33,18 @@ function App() {
     setTodos(updatedTodos)
   }
 
+  const deleteTodo = (todoId)=>{
+    const deletedTodo = todos.filter((todo)=>{
+     return todo.id !== todoId
+    })
+    setTodos(deletedTodo)
+  }
+
   return (
     <div className='App' style={styles.container }>
       <h1 style={styles.title}>My "Gage" List</h1>
-      <Todos todos={todos} toggleCompleted={toggleCompleted}/>
-      
+      <Todos todos={todos} toggleCompleted={toggleCompleted} deleteTodo={deleteTodo}/>
     </div>
-    
   )
   
 }
