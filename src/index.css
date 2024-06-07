@@ -66,3 +66,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+body {
+  background-color: #31a7c4;
+  font-family: sans-serif;
+}
+
+form {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.buat{
+  background-color: rgb(15, 94, 199, 0.5);
+}
+
+#root {
+  background-color: #e9ebebb7;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+}
